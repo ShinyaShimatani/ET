@@ -1,46 +1,8 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+@extends('layouts.app')
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+@section('title','Neo World')
 
-    <title>Neo World</title>
-  </head>
-  
-  <body>
-  <header>
-  <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About</h4>
-          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-            <li><a href="#" class="text-white">Like on Facebook</a></li>
-            <li><a href="#" class="text-white">Email me</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="navbar navbar-dark" style="background-color:#8fbe22;">
-    <div class="container d-flex justify-content-between">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <strong>Neo World</strong>
-      </a>
-     <div class="btn loginPage_contents_btn"><a class="text-white" href="{{ route('login') }}">メールアドレスでログインする</a></div>
-    </div>
-    </div>
-  </div>
-</header>
+@section('content')
 
 <main role="main">
 
@@ -50,7 +12,14 @@
       <font face="Verdana">
       <h1>Neo World</h1>
       </font>
-      <p class="lead text-muted">オンラインの可能性とは。新感覚な旅へ、気軽に一歩踏み出してみませんか</p>
+      <p class="lead text-muted">
+      海外旅行が難しくなっている今ですが、気軽に異国情緒を味わいませんか<br>
+      新感覚な旅へ、一歩踏み出してみませんか
+      </p>
+      <div class="btn loginPage_contents_btn">
+     <a class="text-green" href="{{ route('login') }}">メールアドレスでログインする</a><br>
+     <a class="text-green" href="{{ route('register') }}">アカウントを新規登録する</a>
+     </div>
     </div>
   </section>
 
@@ -177,5 +146,5 @@
 </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
-  </body>
-</html>
+
+@endsection
