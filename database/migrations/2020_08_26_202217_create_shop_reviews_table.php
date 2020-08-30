@@ -14,16 +14,16 @@ class CreateShopReviewsTable extends Migration
     public function up()
     {
         Schema::create('shop_reviews', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('product_id')->default(0)->comment('商品ID');
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('shop_id')->default(0)->comment('お店ID');
             $table->unsignedBigInteger('user_id')->default(0)->comment('ユーザーID');
             $table->integer('stars')->default(0)->comment('星');
             $table->text('comment')->comment('コメント');
             $table->timestamps();
 
-            $table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('shop_id')->references('id')->on('shops');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unique(['product_id', 'user_id']);
+            $table->unique(['shop_id', 'user_id']);
         });
     }
 
