@@ -13,8 +13,8 @@
       <h1>Neo World</h1>
       </font>
       <p class="lead text-muted">
-      海外旅行が難しくなっている今ですが、気軽に異国情緒を味わいませんか<br>
-      新感覚な旅へ、一歩踏み出してみませんか
+      海外旅行が難しくなっている今ですが、オンラインで気軽に異国情緒を味わいませんか<br>
+      リアルタイムで新感覚な旅へ、一歩踏み出してみませんか
       </p>
       <div class="btn loginPage_contents_btn">
      <a class="text-green" href="{{ route('login') }}">メールアドレスでログインする</a><br>
